@@ -1,5 +1,0 @@
-C:/Users/santi/OneDrive/Escritorio/Level3 EDA/Level3-Heart-Disease-Prediction-ML/out/build/x64-debug/CMakeFiles/edit_cache.dir
-C:/Users/santi/OneDrive/Escritorio/Level3 EDA/Level3-Heart-Disease-Prediction-ML/out/build/x64-debug/CMakeFiles/rebuild_cache.dir
-C:/Users/santi/OneDrive/Escritorio/Level3 EDA/Level3-Heart-Disease-Prediction-ML/out/build/x64-debug/Level3-Heart-Disease-Prediction-ML/CMakeFiles/Level3-Heart-Disease-Prediction-ML.dir
-C:/Users/santi/OneDrive/Escritorio/Level3 EDA/Level3-Heart-Disease-Prediction-ML/out/build/x64-debug/Level3-Heart-Disease-Prediction-ML/CMakeFiles/edit_cache.dir
-C:/Users/santi/OneDrive/Escritorio/Level3 EDA/Level3-Heart-Disease-Prediction-ML/out/build/x64-debug/Level3-Heart-Disease-Prediction-ML/CMakeFiles/rebuild_cache.dir

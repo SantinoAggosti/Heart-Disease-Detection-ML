@@ -1,0 +1,17 @@
+# ninja log v5
+5	54	0	clean	8c45b54705a541e8
+31	535	7044753570165586	Level3Eda-HeartDiseaseDetection/CMakeFiles/Level3Eda-HeartDiseaseDetection.dir/entropy.cpp.obj	fb0a097a4a02bdd9
+20	537	7044753570165586	Level3Eda-HeartDiseaseDetection/CMakeFiles/Level3Eda-HeartDiseaseDetection.dir/subset.cpp.obj	a3b6200b970eb4af
+26	136	0	clean	8c45b54705a541e8
+26	175	7044753758956434	Level3Eda-HeartDiseaseDetection/CMakeFiles/Level3Eda-HeartDiseaseDetection.dir/subset.cpp.obj	a3b6200b970eb4af
+36	180	7044753759016698	Level3Eda-HeartDiseaseDetection/CMakeFiles/Level3Eda-HeartDiseaseDetection.dir/entropy.cpp.obj	fb0a097a4a02bdd9
+15	1278	7044753769951284	Level3Eda-HeartDiseaseDetection/CMakeFiles/Level3Eda-HeartDiseaseDetection.dir/main.cpp.obj	610248ba0af7f147
+1279	2602	7044753782665645	Level3Eda-HeartDiseaseDetection/Level3Eda-HeartDiseaseDetection.exe	c3bcd8a31d991a76
+59	1030	7045971962248789	Level3Eda-HeartDiseaseDetection/CMakeFiles/Level3Eda-HeartDiseaseDetection.dir/entropy.cpp.obj	fb0a097a4a02bdd9
+38	1208	7045971964030036	Level3Eda-HeartDiseaseDetection/CMakeFiles/Level3Eda-HeartDiseaseDetection.dir/main.cpp.obj	610248ba0af7f147
+1208	1803	7045971968033735	Level3Eda-HeartDiseaseDetection/Level3Eda-HeartDiseaseDetection.exe	c3bcd8a31d991a76
+12	52	0	clean	8c45b54705a541e8
+14	136	7045972009920080	Level3Eda-HeartDiseaseDetection/CMakeFiles/Level3Eda-HeartDiseaseDetection.dir/subset.cpp.obj	a3b6200b970eb4af
+24	590	7045972014480386	Level3Eda-HeartDiseaseDetection/CMakeFiles/Level3Eda-HeartDiseaseDetection.dir/entropy.cpp.obj	fb0a097a4a02bdd9
+8	809	7045972016670621	Level3Eda-HeartDiseaseDetection/CMakeFiles/Level3Eda-HeartDiseaseDetection.dir/main.cpp.obj	610248ba0af7f147
+810	1159	7045972019460810	Level3Eda-HeartDiseaseDetection/Level3Eda-HeartDiseaseDetection.exe	c3bcd8a31d991a76
