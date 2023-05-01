@@ -1,9 +1,7 @@
-﻿#include "level3.h"
-#include "subset.h"
+﻿#include "dataset.h"
 
 using namespace std;
 
-DataSet dataSet;
 
 // Function to create the dataSet from the csv file
 
