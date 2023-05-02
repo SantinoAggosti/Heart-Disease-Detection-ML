@@ -2,11 +2,15 @@
 # project specific logic here.
 #
 
-# Add source to this project's executable.
-add_executable (HeartDiseaseDetection "main.cpp"  "subset.cpp" "subset.h" "field.h"  "dataSet.h")
+cmake_minimum_required(VERSION 3.0.0)
 
-if (CMAKE_VERSION VERSION_GREATER 3.12)
-  set_property(TARGET HeartDiseaseDetection PROPERTY CXX_STANDARD 20)
-endif()
+project(main)
+
+set(CMAKE_CXX_STANDARD 11)
+
+# Add source to this project's executable.
+add_executable (main main.cpp  CSVData.cpp )
+
 
 # TODO: Add tests and install targets if needed.
+

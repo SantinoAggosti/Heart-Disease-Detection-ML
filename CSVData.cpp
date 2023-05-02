@@ -3,9 +3,9 @@
  * @author Marc S. Ressl
  * @brief Reads and writes CSV files
  * @version 0.2
- *
+ * 
  * @copyright Copyright (c) 2022-2023
- *
+ * 
  */
 
 #include <fstream>
@@ -15,8 +15,8 @@
 using namespace std;
 
 /**
- * @brief Reads a CSV file into a CSVData (list of vectors of fields).
- *
+ * @brief Reads a CSV file into a CSVData (vector of vectors of fields).
+ * 
  * @param path The file to be read
  * @param data A CSVData object
  * @return true Succeeded
@@ -24,7 +24,7 @@ using namespace std;
  */
 bool readCSV(const string path, CSVData &data)
 {
-    ifstream file(path);
+    ifstream file(path, ios_base::binary);
 
     if (!file.is_open())
         return false;
@@ -101,8 +101,8 @@ bool readCSV(const string path, CSVData &data)
 }
 
 /**
- * @brief Writes a CSVData (list of vectors of fields) to a CSV file.
- *
+ * @brief Writes a CSVData (vector of vectors of fields) to a CSV file.
+ * 
  * @param path The file to be written
  * @param data A CSVData object
  * @return true Succeeded
@@ -122,6 +122,11 @@ bool writeCSV(const string path, CSVData &data)
         bool isFirstField = true;
         for (auto field : fields)
         {
+            if (!isFirstField)
+                line += ',';
+            else
+                isFirstField = false;
+
             // Replaces " with ""
             size_t pos = 0;
             while ((pos = field.find('"', pos)) != std::string::npos)
@@ -129,15 +134,8 @@ bool writeCSV(const string path, CSVData &data)
                 field.replace(pos, 1, "\"\"");
                 pos += 2;
             }
-            if (!isFirstField)
-            {
-                line += ',' + field;
-            }
-            else
-            {
-                isFirstField = false;
-                line += '"' + field + '"';
-            }
+
+            line += '"' + field + '"';
         }
 
         line += '\n';

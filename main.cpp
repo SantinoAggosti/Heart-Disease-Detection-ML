@@ -1,4 +1,4 @@
-﻿#include "dataset.h"
+﻿//#include "dataset.h"
 #include "CSVData.h"
 #include <map>
 #include <iostream>
@@ -7,7 +7,6 @@ using namespace std;
 
 #ifdef WIN32
 const string HEART_NAMES_FILE = "\\heart.csv";
-const string TRIGRAMS_PATH = "resources\\trigrams\\";
 #else
 const string HEART_NAMES_FILE = "./heart.csv";
 // const string TRIGRAMS_PATH = "../resources/trigrams/";
@@ -16,44 +15,49 @@ const string HEART_NAMES_FILE = "./heart.csv";
  * @brief Loads trigram data.
  *
  * @param heartHeaders Map of language code vs. language name (in i18n locale).
- * @param languages The trigram profiles.
+ * @param header The csv header.
  * @return true Succeeded
  * @return false Failed
  */
-bool loadLanguagesData(map<string, string> &heartHeaders, Header &header)
-{
-    // Reads available language codes
-    cout << "Reading header codes..." << endl;
+// bool loadHeartData(map<string, string> &heartHeaders, Header &header)
+// {
+//     // Reads available language codes
+//     cout << "Reading header codes..." << endl;
 
-    CSVData heartHeaderCSVData;
-    if (!readCSV(HEART_NAMES_FILE, heartHeaderCSVData))
-        return false;
+//     CSVData heartHeaderCSVData;
+//     if (!readCSV(HEART_NAMES_FILE, heartHeaderCSVData))
+//         return false;
 
-    // Reads trigram profile for each language code
-    for (auto fields : heartHeaderCSVData)
-    {
-        if (fields.size() != 2)
-            continue;
+//     // Reads trigram profile for each language code
+//     for (auto fields : heartHeaderCSVData)
+//     {
+//         if (fields.size() != 2)
+//             continue;
 
-        string age = fields[0];
-        string sex = fields[1];
-		string cp = fields[2];
-		string trthps = fields[3];
-		string chol = fields[4];
+//         string age = fields[0];
+//         string sex = fields[1];
+// 		string cp = fields[2];
+// 		string trthps = fields[3];
+// 		string chol = fields[4];
 
-        heartHeaders[age] = sex;
-    }
+//         heartHeaders[age] = sex;
+//     }
 
-    return true;
-}
+//     return true;
+// }
 
 
 
 // Function to create the dataSet from the csv file
 
-int main()
+int main(int, char *[])
 {
-	
+    CSVData data;
+
+    if (!readCSV("example.csv", data))
+	{
+		std::cerr << "Error reading CSV file" << std::endl;
+	}
 
 	/* Comienza el algoritmo:
 	*
