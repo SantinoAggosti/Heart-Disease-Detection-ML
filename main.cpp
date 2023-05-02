@@ -3,10 +3,12 @@
 #include <map>
 #include <iostream>
 
+#include <unordered_map>
+
 using namespace std;
 
 #ifdef WIN32
-const string HEART_NAMES_FILE = "\\heart.csv";
+const string HEART_NAMES_FILE = "resource\\heart.csv";
 #else
 const string HEART_NAMES_FILE = "./heart.csv";
 // const string TRIGRAMS_PATH = "../resources/trigrams/";
@@ -53,11 +55,104 @@ const string HEART_NAMES_FILE = "./heart.csv";
 int main(int, char *[])
 {
     CSVData data;
+	unordered_map<string, vector<int>> heartData;
 
-    if (!readCSV("example.csv", data))
+    if (readCSV(HEART_NAMES_FILE, data))
+    {
+        // Leo los headers del csv
+		for (size_t headerColumn = 0; headerColumn < data[0].size(); headerColumn++) 
+		{
+    		string header = data[0][headerColumn];
+			vector<int> value;
+			for (size_t row = 1; row < data.size(); row++)
+			{
+				if (header == "oldpeak")
+				{
+					if (stof(data[row][headerColumn]) < 1)
+					{
+						value.push_back(0);
+					}
+					else
+					{
+						value.push_back(1);
+					}
+				}
+				else if (header == "age")
+				{
+					if (stoi(data[row][headerColumn]) < 50)
+					{
+						value.push_back(0);
+					}
+					else if (stoi(data[row][headerColumn]) >= 50 && stoi(data[row][headerColumn]) <= 65)
+					{
+						value.push_back(1);
+					}
+					else
+					{
+						value.push_back(2);
+					}
+				}
+				else if (header == "trtbps")
+				{
+					if (stoi(data[row][headerColumn]) < 120)
+					{
+						value.push_back(0);
+					}
+					else
+					{
+						value.push_back(1);
+					}
+				}
+				else if (header == "chol")
+				{
+					if (stoi(data[row][headerColumn]) < 240)
+					{
+						value.push_back(0);
+					}
+					else
+					{
+						value.push_back(1);
+					}
+				}
+				else if (header == "thalach")
+				{
+					if (stoi(data[row][headerColumn]) < 150)
+					{
+						value.push_back(0);
+					}
+					else
+					{
+						value.push_back(1);
+					}
+				}
+				else
+				{
+					value.push_back(stoi(data[row][headerColumn]));
+				}
+			}
+
+			heartData[header] = value;
+		}
+		// for (size_t row = 0; row < data.size()-250; row++)
+		// {
+		// 	string value = data[row][0];
+		// }
+    }
+    else
+    {
+        cout << "Failed to read CSV file" << endl;
+    }
+
+	for (const auto& pair : heartData) 
 	{
-		std::cerr << "Error reading CSV file" << std::endl;
+		std::cout << "Key: " << pair.first << std::endl;
+		std::cout << "Values: ";
+		for (const auto& value : pair.second) {
+		std::cout << value << " ";
+		}
+		std::cout << std::endl;
 	}
+
 
 	/* Comienza el algoritmo:
 	*

@@ -25,7 +25,7 @@ using namespace std;
 bool readCSV(const string path, CSVData &data)
 {
     ifstream file(path, ios_base::binary);
-
+    
     if (!file.is_open())
         return false;
 
