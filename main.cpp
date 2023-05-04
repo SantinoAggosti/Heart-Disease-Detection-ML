@@ -13,42 +13,6 @@ const string HEART_NAMES_FILE = "resource\\heart.csv";
 const string HEART_NAMES_FILE = "./heart.csv";
 // const string TRIGRAMS_PATH = "../resources/trigrams/";
 #endif
-/**
- * @brief Loads trigram data.
- *
- * @param heartHeaders Map of language code vs. language name (in i18n locale).
- * @param header The csv header.
- * @return true Succeeded
- * @return false Failed
- */
-// bool loadHeartData(map<string, string> &heartHeaders, Header &header)
-// {
-//     // Reads available language codes
-//     cout << "Reading header codes..." << endl;
-
-//     CSVData heartHeaderCSVData;
-//     if (!readCSV(HEART_NAMES_FILE, heartHeaderCSVData))
-//         return false;
-
-//     // Reads trigram profile for each language code
-//     for (auto fields : heartHeaderCSVData)
-//     {
-//         if (fields.size() != 2)
-//             continue;
-
-//         string age = fields[0];
-//         string sex = fields[1];
-// 		string cp = fields[2];
-// 		string trthps = fields[3];
-// 		string chol = fields[4];
-
-//         heartHeaders[age] = sex;
-//     }
-
-//     return true;
-// }
-
-
 
 // Function to create the dataSet from the csv file
 
