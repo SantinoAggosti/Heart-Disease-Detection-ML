@@ -27,60 +27,82 @@ using namespace std;
  * @return false Failed
  */
 
- //Funcion modificada con ayuda de ChatGPT 3.5
 bool readCSV(const string path, CSVData& data)
 {
-	ifstream file(path);
+    ifstream file(path);
 
-	if (!file.is_open())
-		return false;
+    if (!file.is_open())
+        return false;
 
-	vector<vector<int>> csvData;
+    file.seekg(0, ios::end);
+    int fileSize = file.tellg();
+    char* fileData = new char[fileSize];
+    file.seekg(0);
+    file.read(&fileData[0], fileSize);
 
-	bool firstRow = true;
-	vector<string> columnNames;
+    bool inQuotes = false;
+    bool lastQuote = false;
 
-	string line;
-	while (getline(file, line))
-	{
-		stringstream ss_string(line);
-		vector<string> firstRowValues;
-		vector<int> rowValues;
+    string field;
+    vector<string> fields;
 
-		string field;
-		while (getline(ss_string, field, ','))
-		{
-			if (firstRow) {
-				firstRowValues.push_back(field);
-				columnNames = firstRowValues;
-				firstRow = false;
-			}
-			else {
-				rowValues.push_back(stoi(field));
-			}
-		}
-		unordered_map<string, unordered_map<char, char>> row;
-		for (int j = 0; j < rowValues.size(); j++)
-		{
-			string columnName = columnNames[j];
-			int value = rowValues[j];
+    for (int i = 0; i < fileSize; i++)
+    {
+        char c = fileData[i];
 
-			string valueStr = to_string(value);
-			if (row.find(columnName) == row.end())
-			{
-				row[columnName] = unordered_map<char, char>();
-			}
+        if (lastQuote && c != '"')
+            inQuotes = !inQuotes;
 
-			char lastColumnValue = valueStr.back();
-			row[columnName][(char)j] = lastColumnValue;
-		}
+        if (c == '"')
+        {
+            if (lastQuote)
+            {
+                field += c;
+                lastQuote = false;
+            }
+            else
+                lastQuote = true;
+        }
+        else if (c == ',')
+        {
+            if (inQuotes)
+                field += c;
+            else
+            {
+                fields.push_back(field);
+                field.clear();
+            }
 
-		data.push_back(row);
-	}
+            lastQuote = false;
+        }
+        else if ((c == '\n') || (c == '\r'))
+        {
+            if (field.size())
+                fields.push_back(field);
+            field.clear();
 
-	file.close();
+            if (fields.size())
+                data.push_back(fields);
+            fields.clear();
 
-	return true;
+            inQuotes = false;
+            lastQuote = false;
+        }
+        else
+        {
+            field += c;
+            lastQuote = false;
+        }
+    }
+
+    if (field.size())
+        fields.push_back(field);
+    if (fields.size())
+        data.push_back(fields);
+
+    delete[] fileData;
+
+    return true;
 }
 //ifstream file(path);
 
@@ -181,6 +203,8 @@ bool loadDataSet(const string path) {
 
 	return true;
 }
+
+
 
 /**
  * @brief Writes a CSVData (list of vectors of fields) to a CSV file.

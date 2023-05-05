@@ -18,7 +18,7 @@ const string TRIGRAMS_PATH = "../resources/trigrams/";
 // Function to create the dataSet from the csv file
 
 int main()
-{	
+{
 	CSVData data;
 	loadDataSet(HEART_NAMES_FILE);
 	/* Comienza el algoritmo:

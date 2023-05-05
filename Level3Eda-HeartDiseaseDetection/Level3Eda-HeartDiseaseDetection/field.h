@@ -10,7 +10,10 @@ using namespace std;
 
 class Field {
 public:
-	string field_name;
+	Field(string fieldName) {
+		this->fieldName = fieldName;
+	}
+	string fieldName;
 	unordered_map<char, Subset> field_values;
 
 	double entropyGain(list<char>& indices);
