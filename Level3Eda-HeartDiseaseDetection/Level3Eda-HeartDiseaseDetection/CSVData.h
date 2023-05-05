@@ -14,17 +14,20 @@
 #include <list>
 #include <string>
 #include <vector>
+#include "dataSet.h"
+
+using namespace std;
 
 struct Header
 {
-    std::string Header;
-    // TrigramProfile trigramProfile;
+    string Header;
 };
 
-typedef std::list<Header> Headers;
-typedef std::list<std::vector<std::string>> CSVData;
+typedef list<Header> Headers;
+typedef list<vector<string>> CSVData;
 
-bool readCSV(const std::string path, CSVData &data);
-bool writeCSV(const std::string path, CSVData &data);
+bool readCSV(const string path, CSVData& data);
+bool writeCSV(const string path, CSVData& data);
+bool loadDataSet(const string path);
 
 #endif

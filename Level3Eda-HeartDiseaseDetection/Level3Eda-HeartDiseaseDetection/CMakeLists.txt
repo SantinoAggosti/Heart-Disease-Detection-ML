@@ -3,7 +3,7 @@
 #
 
 # Add source to this project's executable.
-add_executable (HeartDiseaseDetection "main.cpp"  "subset.cpp" "subset.h" "field.h"  "dataSet.h")
+add_executable (HeartDiseaseDetection "main.cpp"  "subset.cpp" "subset.h" "field.h"  "dataSet.h" "CSVData.h" "CSVData.cpp" "field.cpp")
 
 if (CMAKE_VERSION VERSION_GREATER 3.12)
   set_property(TARGET HeartDiseaseDetection PROPERTY CXX_STANDARD 20)

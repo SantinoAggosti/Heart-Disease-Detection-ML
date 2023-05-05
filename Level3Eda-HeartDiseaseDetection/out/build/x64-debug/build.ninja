@@ -69,47 +69,47 @@ build rebuild_cache: phony CMakeFiles\rebuild_cache.util
 # =============================================================================
 
 # =============================================================================
-# Object build statements for EXECUTABLE target Level3Eda-HeartDiseaseDetection
+# Object build statements for EXECUTABLE target HeartDiseaseDetection
 
 
 #############################################
-# Order-only phony target for Level3Eda-HeartDiseaseDetection
+# Order-only phony target for HeartDiseaseDetection
 
-build cmake_object_order_depends_target_Level3Eda-HeartDiseaseDetection: phony || Level3Eda-HeartDiseaseDetection\CMakeFiles\Level3Eda-HeartDiseaseDetection.dir
+build cmake_object_order_depends_target_HeartDiseaseDetection: phony || Level3Eda-HeartDiseaseDetection\CMakeFiles\HeartDiseaseDetection.dir
 
-build Level3Eda-HeartDiseaseDetection\CMakeFiles\Level3Eda-HeartDiseaseDetection.dir\main.cpp.obj: CXX_COMPILER__Level3Eda-HeartDiseaseDetection_Debug C$:\Users\santi\OneDrive\Escritorio\Heart-Disease-Detection-ML\Level3Eda-HeartDiseaseDetection\Level3Eda-HeartDiseaseDetection\main.cpp || cmake_object_order_depends_target_Level3Eda-HeartDiseaseDetection
+build Level3Eda-HeartDiseaseDetection\CMakeFiles\HeartDiseaseDetection.dir\main.cpp.obj: CXX_COMPILER__HeartDiseaseDetection_Debug C$:\Users\santi\OneDrive\Escritorio\Heart-Disease-Detection-ML\Level3Eda-HeartDiseaseDetection\Level3Eda-HeartDiseaseDetection\main.cpp || cmake_object_order_depends_target_HeartDiseaseDetection
   FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -ZI -std:c++20
-  OBJECT_DIR = Level3Eda-HeartDiseaseDetection\CMakeFiles\Level3Eda-HeartDiseaseDetection.dir
-  OBJECT_FILE_DIR = Level3Eda-HeartDiseaseDetection\CMakeFiles\Level3Eda-HeartDiseaseDetection.dir
-  TARGET_COMPILE_PDB = Level3Eda-HeartDiseaseDetection\CMakeFiles\Level3Eda-HeartDiseaseDetection.dir\
-  TARGET_PDB = Level3Eda-HeartDiseaseDetection\Level3Eda-HeartDiseaseDetection.pdb
+  OBJECT_DIR = Level3Eda-HeartDiseaseDetection\CMakeFiles\HeartDiseaseDetection.dir
+  OBJECT_FILE_DIR = Level3Eda-HeartDiseaseDetection\CMakeFiles\HeartDiseaseDetection.dir
+  TARGET_COMPILE_PDB = Level3Eda-HeartDiseaseDetection\CMakeFiles\HeartDiseaseDetection.dir\
+  TARGET_PDB = Level3Eda-HeartDiseaseDetection\HeartDiseaseDetection.pdb
 
-build Level3Eda-HeartDiseaseDetection\CMakeFiles\Level3Eda-HeartDiseaseDetection.dir\subset.cpp.obj: CXX_COMPILER__Level3Eda-HeartDiseaseDetection_Debug C$:\Users\santi\OneDrive\Escritorio\Heart-Disease-Detection-ML\Level3Eda-HeartDiseaseDetection\Level3Eda-HeartDiseaseDetection\subset.cpp || cmake_object_order_depends_target_Level3Eda-HeartDiseaseDetection
+build Level3Eda-HeartDiseaseDetection\CMakeFiles\HeartDiseaseDetection.dir\subset.cpp.obj: CXX_COMPILER__HeartDiseaseDetection_Debug C$:\Users\santi\OneDrive\Escritorio\Heart-Disease-Detection-ML\Level3Eda-HeartDiseaseDetection\Level3Eda-HeartDiseaseDetection\subset.cpp || cmake_object_order_depends_target_HeartDiseaseDetection
   FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -ZI -std:c++20
-  OBJECT_DIR = Level3Eda-HeartDiseaseDetection\CMakeFiles\Level3Eda-HeartDiseaseDetection.dir
-  OBJECT_FILE_DIR = Level3Eda-HeartDiseaseDetection\CMakeFiles\Level3Eda-HeartDiseaseDetection.dir
-  TARGET_COMPILE_PDB = Level3Eda-HeartDiseaseDetection\CMakeFiles\Level3Eda-HeartDiseaseDetection.dir\
-  TARGET_PDB = Level3Eda-HeartDiseaseDetection\Level3Eda-HeartDiseaseDetection.pdb
+  OBJECT_DIR = Level3Eda-HeartDiseaseDetection\CMakeFiles\HeartDiseaseDetection.dir
+  OBJECT_FILE_DIR = Level3Eda-HeartDiseaseDetection\CMakeFiles\HeartDiseaseDetection.dir
+  TARGET_COMPILE_PDB = Level3Eda-HeartDiseaseDetection\CMakeFiles\HeartDiseaseDetection.dir\
+  TARGET_PDB = Level3Eda-HeartDiseaseDetection\HeartDiseaseDetection.pdb
 
 
 # =============================================================================
-# Link build statements for EXECUTABLE target Level3Eda-HeartDiseaseDetection
+# Link build statements for EXECUTABLE target HeartDiseaseDetection
 
 
 #############################################
-# Link the executable Level3Eda-HeartDiseaseDetection\Level3Eda-HeartDiseaseDetection.exe
+# Link the executable Level3Eda-HeartDiseaseDetection\HeartDiseaseDetection.exe
 
-build Level3Eda-HeartDiseaseDetection\Level3Eda-HeartDiseaseDetection.exe: CXX_EXECUTABLE_LINKER__Level3Eda-HeartDiseaseDetection_Debug Level3Eda-HeartDiseaseDetection\CMakeFiles\Level3Eda-HeartDiseaseDetection.dir\main.cpp.obj Level3Eda-HeartDiseaseDetection\CMakeFiles\Level3Eda-HeartDiseaseDetection.dir\subset.cpp.obj
+build Level3Eda-HeartDiseaseDetection\HeartDiseaseDetection.exe: CXX_EXECUTABLE_LINKER__HeartDiseaseDetection_Debug Level3Eda-HeartDiseaseDetection\CMakeFiles\HeartDiseaseDetection.dir\main.cpp.obj Level3Eda-HeartDiseaseDetection\CMakeFiles\HeartDiseaseDetection.dir\subset.cpp.obj
   FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -ZI
   LINK_FLAGS = /machine:x64 /debug /INCREMENTAL /subsystem:console
   LINK_LIBRARIES = kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
-  OBJECT_DIR = Level3Eda-HeartDiseaseDetection\CMakeFiles\Level3Eda-HeartDiseaseDetection.dir
+  OBJECT_DIR = Level3Eda-HeartDiseaseDetection\CMakeFiles\HeartDiseaseDetection.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
-  TARGET_COMPILE_PDB = Level3Eda-HeartDiseaseDetection\CMakeFiles\Level3Eda-HeartDiseaseDetection.dir\
-  TARGET_FILE = Level3Eda-HeartDiseaseDetection\Level3Eda-HeartDiseaseDetection.exe
-  TARGET_IMPLIB = Level3Eda-HeartDiseaseDetection\Level3Eda-HeartDiseaseDetection.lib
-  TARGET_PDB = Level3Eda-HeartDiseaseDetection\Level3Eda-HeartDiseaseDetection.pdb
+  TARGET_COMPILE_PDB = Level3Eda-HeartDiseaseDetection\CMakeFiles\HeartDiseaseDetection.dir\
+  TARGET_FILE = Level3Eda-HeartDiseaseDetection\HeartDiseaseDetection.exe
+  TARGET_IMPLIB = Level3Eda-HeartDiseaseDetection\HeartDiseaseDetection.lib
+  TARGET_PDB = Level3Eda-HeartDiseaseDetection\HeartDiseaseDetection.pdb
 
 
 #############################################
@@ -137,9 +137,9 @@ build Level3Eda-HeartDiseaseDetection\rebuild_cache: phony Level3Eda-HeartDiseas
 # =============================================================================
 # Target aliases.
 
-build Level3Eda-HeartDiseaseDetection: phony Level3Eda-HeartDiseaseDetection\Level3Eda-HeartDiseaseDetection.exe
+build HeartDiseaseDetection: phony Level3Eda-HeartDiseaseDetection\HeartDiseaseDetection.exe
 
-build Level3Eda-HeartDiseaseDetection.exe: phony Level3Eda-HeartDiseaseDetection\Level3Eda-HeartDiseaseDetection.exe
+build HeartDiseaseDetection.exe: phony Level3Eda-HeartDiseaseDetection\HeartDiseaseDetection.exe
 
 # =============================================================================
 # Folder targets.
@@ -156,7 +156,7 @@ build all: phony Level3Eda-HeartDiseaseDetection\all
 #############################################
 # Folder: C:/Users/santi/OneDrive/Escritorio/Heart-Disease-Detection-ML/Level3Eda-HeartDiseaseDetection/out/build/x64-debug/Level3Eda-HeartDiseaseDetection
 
-build Level3Eda-HeartDiseaseDetection\all: phony Level3Eda-HeartDiseaseDetection\Level3Eda-HeartDiseaseDetection.exe
+build Level3Eda-HeartDiseaseDetection\all: phony Level3Eda-HeartDiseaseDetection\HeartDiseaseDetection.exe
 
 # =============================================================================
 # Built-in targets

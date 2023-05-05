@@ -1,6 +1,10 @@
+#ifndef _FIELD_H
+#define _FIELD_H
+
 #include <cmath>
 #include <string>
 #include "subset.h"
+
 
 using namespace std;
 
@@ -11,28 +15,6 @@ public:
 
 	double entropyGain(list<char>& indices);
 };
-
-double Field::entropyGain(list<char>& indices) {
-
-	float entropy_summation = 0;
-	float set_entropy = 0; //CALCULATE ENTROPY;
-
-	Subset subset;
-
-	for (auto i : field_values)
-	{
-		for (char x : indices)
-		{
-			subset = i.second;
-			entropy_summation -= subset.subSetEntropy() * subset.exampleProportion(indices);
-			set_entropy -= subset.true_proportion * log2(subset.true_proportion);
-			set_entropy -= subset.false_proportion * log2(subset.false_proportion);
-		}
-	}
-	
-
-	return set_entropy * entropy_summation;
-}
 
 // Calculo de entropia de un Subconjunto.
 
@@ -57,3 +39,4 @@ guarda todos los ejemplos que tienen a ese valor en especifico.
 
 
 */
+#endif

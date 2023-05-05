@@ -11,6 +11,7 @@
 #include <fstream>
 
 #include "CSVData.h"
+#include <iostream>
 
 using namespace std;
 
@@ -22,7 +23,7 @@ using namespace std;
  * @return true Succeeded
  * @return false Failed
  */
-bool readCSV(const string path, CSVData &data)
+bool readCSV(const string path, CSVData& data)
 {
     ifstream file(path);
 
@@ -31,7 +32,7 @@ bool readCSV(const string path, CSVData &data)
 
     file.seekg(0, ios::end);
     int fileSize = file.tellg();
-    char *fileData = new char[fileSize];
+    char* fileData = new char[fileSize];
     file.seekg(0);
     file.read(&fileData[0], fileSize);
 
@@ -100,6 +101,30 @@ bool readCSV(const string path, CSVData &data)
     return true;
 }
 
+bool loadDataSet(const string path) {
+
+    CSVData heartCSVData;
+    if (!readCSV(path, heartCSVData)) {
+        cout << "ERROR WHEN READING FILE GOES BRRR" << endl;
+        return false;
+    }
+    cout << "SUCESSFULL FILE OPENINGG GOES BRAA" << endl;
+    for (auto fields : heartCSVData)
+    {
+        // Que hace este if?
+        if (fields.size() != 2)
+            continue;
+
+        string age = fields[0];
+        string sex = fields[1];
+        string cp = fields[2];
+        string trthps = fields[3];
+        string chol = fields[4];
+    }
+
+    return true;
+}
+
 /**
  * @brief Writes a CSVData (list of vectors of fields) to a CSV file.
  *
@@ -108,7 +133,7 @@ bool readCSV(const string path, CSVData &data)
  * @return true Succeeded
  * @return false Failed
  */
-bool writeCSV(const string path, CSVData &data)
+bool writeCSV(const string path, CSVData& data)
 {
     ofstream file(path);
 
